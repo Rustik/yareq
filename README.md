@@ -8,6 +8,11 @@ Add this line to your application's Gemfile:
 
     gem 'yareq', github: 'Rustik/yareq'
 
+    # dependencies -- because I didn't submit it into RubyGems I don't need to build it with it's dependencies
+    gem 'curb'
+    gem 'nokogiri'
+    gem 'addressable'
+
 And then execute:
 
     $ bundle
