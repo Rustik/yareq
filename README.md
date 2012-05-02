@@ -11,6 +11,8 @@ Add this line to your application's Gemfile:
 And then execute:
 
     $ bundle
+    $ bundle exec gem build yareq.gemspec
+    $ yareq
 
 ## Usage
 
