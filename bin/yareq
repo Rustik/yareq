@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+require 'yareq'
+
+options = {}
+
+opt_parser = OptionParser.new do |opt|
+  opt.banner = "Usage: yareq QUERY [OPTIONS]"
+  opt.separator  ""
+
+  opt.on("-n", "--number NUMBER", "which number of results you want to retrieve") do |num|
+    options[:num] = num.to_i
+  end
+
+  opt.on("-h", "--help", "help") do
+    puts opt_parser
+  end
+
+end
+
+opt_parser.parse!
+
+unless ARGV[0].nil?
+  yareq = Yareq::Request.new ARGV[0], { lr: "2" }
+  results = yareq.process
+  if options[:num]
+    if options[:num] > results.size
+      puts "out of results range, got only #{results.size} results"
+    else
+      puts results[options[:num]]
+    end
+  else
+    puts results.join("\n")
+  end
+else
+  puts opt_parser
+end
