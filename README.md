@@ -20,10 +20,11 @@ And then execute:
 
 ## Usage
 
-1. using command line: 
+Using command line: 
+
    type: bundle exec yareq
 
-2. inside your app:
+Inside your app:
 
    require 'yareq'
    y = Yareq::Request.new "ford", { lr: "2" }
