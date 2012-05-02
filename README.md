@@ -21,13 +21,13 @@ And then execute:
 ## Usage
 
 1. using command line: 
-   type: yareq
+   type: bundle exec yareq
 
 2. inside your app:
 
-require 'yareq'
-y = Yareq::Request.new "ford", { lr: "2" }
-puts y.process
+   require 'yareq'
+   y = Yareq::Request.new "ford", { lr: "2" }
+   y.process #=> [array of links]
 
 ## Contributing
 
