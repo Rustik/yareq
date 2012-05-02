@@ -6,15 +6,11 @@ This gem demonstrate how to query yandex search engine via http and parse result
 
 Add this line to your application's Gemfile:
 
-    gem 'yareq'
+    gem 'yareq', github: 'Rustik/yareq'
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install yareq
 
 ## Usage
 

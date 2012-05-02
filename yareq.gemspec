@@ -14,4 +14,10 @@ Gem::Specification.new do |gem|
   gem.name          = "yareq"
   gem.require_paths = ["lib"]
   gem.version       = Yareq::VERSION
+
+  gem.add_dependency(%q<curb>)
+  gem.add_dependency(%q<nokogiri>)
+  gem.add_dependency(%q<addressable>)
+  gem.add_dependency(%q<webmock>)
+
 end
